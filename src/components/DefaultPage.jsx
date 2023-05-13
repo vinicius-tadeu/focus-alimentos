@@ -54,7 +54,7 @@ export default function DefaultPage() {
         </ul>
       </header>
     ):(
-      window.location.href = "login"
+      window.location.assign('login')
     )}
       <Outlet />
     </>
