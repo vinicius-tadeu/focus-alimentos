@@ -27,6 +27,8 @@ export default function DefaultPage() {
     logar = false;
   }
 
+  console.log(logar);
+
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, {logado: false});
