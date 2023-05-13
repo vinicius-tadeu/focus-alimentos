@@ -44,6 +44,7 @@ function Login() {
     });
     console.log(usuario, document.id);
     armazenar(usuario, document.id);
+    window.location.assign("/home");
   }
 
   async function authLogin() {
@@ -88,9 +89,9 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link onClick={authLogin} to="/home" className="button" >
+            <button onClick={authLogin} className="button" >
               Entrar
-            </Link>
+            </button>
             <a href="/register" className="button">Registrar</a>
           </form>
         </div>
