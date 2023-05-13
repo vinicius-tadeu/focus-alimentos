@@ -44,7 +44,6 @@ function Login() {
     });
     console.log(usuario, document.id);
     armazenar(usuario, document.id);
-    window.location.assign("https://focus-alimentos.vercel.app/home");
   }
 
   async function authLogin() {
@@ -89,9 +88,9 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="button" onClick={authLogin}>
+            <Link to="/home" onClick={authLogin}>
               Entrar
-            </button>
+            </Link>
             <Link to="/registrar">Registrar</Link>
           </form>
         </div>
