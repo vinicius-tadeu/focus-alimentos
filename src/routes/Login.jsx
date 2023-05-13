@@ -9,7 +9,6 @@ import {
   doc,
 } from "firebase/firestore";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
