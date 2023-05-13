@@ -88,7 +88,7 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={authLogin} className="button" >
+            <button type="button" onClick={authLogin} className="button" >
               Entrar
             </button>
             <a href="/register" className="button">Registrar</a>
