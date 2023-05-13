@@ -3,7 +3,6 @@ import "./DefaultPage.css";
 import pessoa from "../assets/pessoa.png";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import Login from "../routes/Login";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -15,7 +14,6 @@ export default function DefaultPage() {
   const email = localStorage.getItem("2");
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
-  const logado = localStorage.getItem("6");
   const db = getFirestore(firebaseApp);
 
   async function updateUserState(){
@@ -24,7 +22,6 @@ export default function DefaultPage() {
   }
   return (
     <>
-    {logado?(
       <header id="header">
         <nav>
           <ul className="ulHome">
@@ -54,9 +51,6 @@ export default function DefaultPage() {
           <Link to="/login" className="btnSair" onClick={updateUserState}>Sair</Link>
         </ul>
       </header>
-    ):(
-      <Login/>
-    )}
       <Outlet />
     </>
   );
