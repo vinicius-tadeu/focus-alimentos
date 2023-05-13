@@ -3,7 +3,6 @@ import "./DefaultPage.css";
 import pessoa from "../assets/pessoa.png";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import Login from "../routes/Login";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -55,7 +54,7 @@ export default function DefaultPage() {
         </ul>
       </header>
     ):(
-      <Login />
+      ""
     )}
       <Outlet />
     </>
