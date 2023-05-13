@@ -88,10 +88,10 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link to="/home" onClick={authLogin}>
+            <Link to="/home" className="button" onClick={authLogin}>
               Entrar
             </Link>
-            <Link to="/registrar">Registrar</Link>
+            <Link to="/registrar" className="button">Registrar</Link>
           </form>
         </div>
         <div className="wrapperTitle">
