@@ -1,4 +1,5 @@
 import "./Home.css";
+import laranja from "../assets/Laranja.png";
 function Home() {
   return (
     <>
@@ -16,7 +17,7 @@ function Home() {
           </div>
           <div className="wrapperOrange">
             <img
-              src="/src/assets/Laranja.png"
+              src={laranja}
               alt="Laranja"
               className="orangeFruit"
               width={"600px"}
