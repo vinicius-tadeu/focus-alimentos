@@ -12,7 +12,6 @@ const firebaseApp = initializeApp({
 export default function DefaultPage() {
   const name = localStorage.getItem("1");
   const email = localStorage.getItem("2");
-  // const password = localStorage.getItem("3");
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
   const db = getFirestore(firebaseApp);
@@ -22,7 +21,9 @@ export default function DefaultPage() {
     await updateDoc(userDoc, {logado: false});
     window.location.href = "/login";
   }
-
+  if(name == ""){
+    window.location.href = "/login";
+  }
   return (
     <>
       <header id="header">
