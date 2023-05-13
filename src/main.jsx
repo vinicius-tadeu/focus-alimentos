@@ -5,11 +5,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./routes/Home.jsx";
 import Admin from "./routes/Admin.jsx";
-import Login from "./routes/Login";
-import Register from "./routes/Register";
-import ErrorPage from "./routes/ErrorPage";
-import DefaultPage from "./components/DefaultPage";
-import Alimentos from "./routes/Alimentos";
+import Login from "./routes/Login.jsx";
+import Register from "./routes/Register.jsx";
+import ErrorPage from "./routes/ErrorPage.jsx";
+import DefaultPage from "./components/DefaultPage.jsx";
+import Alimentos from "./routes/Alimentos.jsx";
 
 const router = createBrowserRouter([
   {
