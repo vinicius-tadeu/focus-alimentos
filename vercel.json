@@ -4,6 +4,6 @@
       { "src": "/home", "dest": "/" },
       { "src": "/alimentos", "dest": "/" },
       { "src": "/admin", "dest": "/" },
-      { "src": "/register", "dest": "/" },
+      { "src": "/register", "dest": "/" }
     ]
   }
