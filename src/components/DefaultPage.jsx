@@ -18,6 +18,7 @@ export default function DefaultPage() {
 
   if(name){
     window.location.href = "/login";
+    console.log('entrou');
   }
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
