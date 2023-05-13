@@ -16,7 +16,7 @@ export default function DefaultPage() {
   const id = localStorage.getItem("5");
   const db = getFirestore(firebaseApp);
 
-  if(name == ""){
+  if(name){
     window.location.href = "/login";
   }
   async function updateUserState(){
