@@ -16,10 +16,6 @@ export default function DefaultPage() {
   const id = localStorage.getItem("5");
   const db = getFirestore(firebaseApp);
 
-  if(name){
-    window.location.href = "/login";
-    console.log('entrou');
-  }
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, {logado: false});
