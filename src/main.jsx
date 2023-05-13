@@ -9,13 +9,18 @@ import Login from "./routes/Login.jsx";
 import Register from "./routes/Register.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import Alimentos from "./routes/Alimentos.jsx";
+import DefaultPage from "./components/DefaultPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <DefaultPage />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "login",
+        element: <Login />,
+      },
       {
         path: "register",
         element: <Register />,
