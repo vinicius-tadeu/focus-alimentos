@@ -17,6 +17,7 @@ export default function DefaultPage() {
   const status = localStorage.getItem("6");
   const db = getFirestore(firebaseApp);
   var logar = true;
+  console.log('Está no Default Page.');
 
   if(status){
     logar = false;
