@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1c1c1c;
+}
+.mainAdmin{
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+    padding-top: 5%;
+}
+.ulAdmin{
+    text-align: center;
+    margin: 0 5%;
+    padding: 0 5%;
+    width: 60%;
+    background-color: #b94a44;
+    overflow-y: scroll;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ulAdmin>div{
+    background-color: #360940;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.ulAdmin>h1{
+    color: #fff;
+    margin-bottom: 5%;
+}
+li{
+    list-style: none;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: #b94a44;
+    justify-content: space-around;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formulario button{
+    background-color: rgb(0, 113, 76);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.formulario input{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.formulario input:focus{
+    outline: solid 3px #ff665d;
+}
+.formulario button:hover{
+    transition: background .6s;
+    background-color: rgb(0, 178, 118);
+}
+.formularios{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #360940;
+    width: 40%;
+    padding: 0 2%;
+    border-radius: 20px;
+}
+.cardUser{
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.cardInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.cardInfo li{
+    white-space: nowrap;
+}
+.cardInfo p{
+    white-space: normal;
+}
+.cardInfoTitle{
+    display: flex;
+}
+.cardUser button{
+    background-color: rgb(0, 113, 76);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.buttonsCard{
+    display: flex;
+    justify-content: space-around;
+}
