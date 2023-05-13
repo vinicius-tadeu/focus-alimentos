@@ -4,7 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./routes/Home.jsx";
-import Admin from "./routes/admin.jsx";
+import Admin from "./routes/Admin.jsx";
 import Login from "./routes/Login";
 import Register from "./routes/Register";
 import ErrorPage from "./routes/ErrorPage";
