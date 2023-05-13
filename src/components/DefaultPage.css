@@ -17,6 +17,7 @@
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 .btnSair:hover{
     transition: all .3s linear;
