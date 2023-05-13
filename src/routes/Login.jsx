@@ -43,7 +43,7 @@ function Login() {
     });
     console.log(usuario, document.id);
     armazenar(usuario, document.id);
-    window.location.href = "/home";
+    window.location.assign("https://focus-alimentos.vercel.app/home");
   }
 
   async function authLogin() {
