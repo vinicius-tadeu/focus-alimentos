@@ -9,6 +9,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -91,7 +92,7 @@ function Login() {
             <button type="button" onClick={authLogin}>
               Entrar
             </button>
-            <a href="/register">Registrar</a>
+            <Link to="/registrar">Registrar</Link>
           </form>
         </div>
         <div className="wrapperTitle">
