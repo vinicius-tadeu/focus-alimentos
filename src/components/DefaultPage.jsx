@@ -20,14 +20,15 @@ export default function DefaultPage() {
 
   if(status){
     logar = false;
+    console.log("Status ok",logar);
   }
   
   if(logar){
     window.location.href = "login";
     logar = false;
+    console.log("Entrou em alterar URL.",logar);
   }
 
-  console.log(logar);
 
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
