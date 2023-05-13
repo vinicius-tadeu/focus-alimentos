@@ -91,7 +91,7 @@ function Login() {
             <Link onClick={authLogin} to="/home" className="button" >
               Entrar
             </Link>
-            <Link to="/registrar" className="button">Registrar</Link>
+            <Link to="/register" className="button">Registrar</Link>
           </form>
         </div>
         <div className="wrapperTitle">
