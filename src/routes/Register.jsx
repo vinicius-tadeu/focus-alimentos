@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import "./Register.css";
+import { Link } from "react-router-dom";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -63,9 +64,9 @@ function Register() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="button" onClick={createUser}>
+            <Link to="/login" onClick={createUser}>
               Criar Conta
-            </button>
+            </Link>
           </form>
         </div>
       </div>
