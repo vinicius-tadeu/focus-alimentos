@@ -19,10 +19,7 @@ export default function DefaultPage() {
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, {logado: false});
-    window.location.href = "/login";
-  }
-  if(name == "" || undefined || null || NaN){
-    window.location.href = "/login";
+    window.location.assign("/login");
   }
   return (
     <>
