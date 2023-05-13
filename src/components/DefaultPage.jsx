@@ -14,7 +14,18 @@ export default function DefaultPage() {
   const email = localStorage.getItem("2");
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
+  const status = localStorage.getItem("6");
   const db = getFirestore(firebaseApp);
+  var logar = true;
+
+  if(status){
+    logar = false;
+  }
+  
+  if(logar){
+    window.location.href = "login";
+    logar = false;
+  }
 
   async function updateUserState(){
     const userDoc = doc(db, "users", id);

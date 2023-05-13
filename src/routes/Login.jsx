@@ -28,6 +28,7 @@ function Login() {
     localStorage.setItem("3", usuario.password);
     localStorage.setItem("4", usuario.typeUser);
     localStorage.setItem("5", id);
+    localStorage.setItem("6", usuario.logado);
   }
 
   async function updateDocument(document) {
