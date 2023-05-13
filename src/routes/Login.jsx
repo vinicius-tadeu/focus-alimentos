@@ -88,7 +88,7 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link to="/home" className="button" onClick={authLogin}>
+            <Link onClick={authLogin} to="/home" className="button" >
               Entrar
             </Link>
             <Link to="/registrar" className="button">Registrar</Link>
