@@ -10,6 +10,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import "./Admin.css";
+import DefaultPage from './../components/DefaultPage';
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -74,6 +75,7 @@ function Admin() {
 
   return (
     <>
+      <DefaultPage />
       <main className="mainAdmin">
         <div className="formularios">
           <form className="formulario">

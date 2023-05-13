@@ -1,8 +1,10 @@
+import DefaultPage from "../components/DefaultPage";
 import data from "../services/utis.json";
 import "./Alimentos.css";
 export default function Alimentos() {
   return (
     <>
+    <DefaultPage/>
       <h1 className="titleFoods">Alimentos</h1>
       <div className="wrapperFood">
         {data?.map((i) => {

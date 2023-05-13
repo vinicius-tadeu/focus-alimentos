@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./DefaultPage.css";
 import pessoa from "../assets/pessoa.png";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
@@ -66,7 +66,6 @@ export default function DefaultPage() {
           <Link to="/login" className="btnSair" onClick={updateUserState}>Sair</Link>
         </ul>
       </header>
-      <Outlet />
     </>
   );
 }

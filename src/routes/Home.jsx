@@ -1,8 +1,10 @@
 import "./Home.css";
 import laranja from "../assets/Laranja.png";
+import DefaultPage from "../components/DefaultPage";
 function Home() {
   return (
     <>
+    <DefaultPage/>
       <main className="mainHome">
         <div className="wrapperMain">
           <div className="titleMain">
