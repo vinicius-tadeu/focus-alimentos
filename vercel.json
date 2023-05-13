@@ -1,8 +1,9 @@
 {
-    "rewrites": [
-      {
-        "source": "/((?!api/.*).*)",
-        "destination": "/index.html"
-      }
+    "routes": [
+      { "src": "/", "dest": "/login" },
+      { "src": "/home", "dest": "/" },
+      { "src": "/alimentos", "dest": "/" },
+      { "src": "/admin", "dest": "/" },
+      { "src": "/register", "dest": "/" },
     ]
   }
