@@ -1,9 +1,0 @@
-{
-    "rewrites":  [
-      {"source": "/", "destination": "/login"},
-      {"source": "/home", "destination": "https://focos-alimentos.vercel.app/home"},
-      {"source": "/admin", "destination": "https://focos-alimentos.vercel.app/admin"},
-      {"source": "/alimentos", "destination": "https://focos-alimentos.vercel.app/alimentos"},
-      {"source": "/register", "destination": "https://focos-alimentos.vercel.app/register"}
-    ]
-  }
