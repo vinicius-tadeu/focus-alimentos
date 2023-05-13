@@ -21,7 +21,7 @@ export default function DefaultPage() {
     await updateDoc(userDoc, {logado: false});
     window.location.href = "/login";
   }
-  if(name == ""){
+  if(name == "" || undefined || null){
     window.location.href = "/login";
   }
   return (
