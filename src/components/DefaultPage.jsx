@@ -19,7 +19,6 @@ export default function DefaultPage() {
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, {logado: false});
-    window.location.assign("/login");
   }
   return (
     <>
@@ -49,7 +48,7 @@ export default function DefaultPage() {
             <li>{name}</li>
             <li>{email}</li>
           </div>
-          <button type="button" className="btnSair" onClick={updateUserState}>Sair</button>
+          <Link to="/login" type="button" className="btnSair" onClick={updateUserState}>Sair</Link>
         </ul>
       </header>
       <Outlet />
