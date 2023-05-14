@@ -32,3 +32,15 @@ p{
     color: #ff0059;
     font-weight: bold;
 }
+.wrapperBusca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 6.8%;
+    margin-top: 3%;
+    gap: 2%;
+}
+.wrapperBusca input{
+    border-radius: 10px;
+    padding: 5px;
+}
