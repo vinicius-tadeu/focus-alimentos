@@ -52,3 +52,22 @@
 .wrapper{
     display: flex;
 }
+.imgAlimentos{
+    width: 70%;
+}
+.btnRegister{
+    background-color: #67006e;
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(68, 0, 53);
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.btnRegister:hover{
+    background-color: #330048;
+}

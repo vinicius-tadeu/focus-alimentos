@@ -3,6 +3,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
+import alimentos from "../assets/alimentos.jpg";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -20,15 +21,20 @@ function Register() {
   async function createUser() {
     if (name && email && password) {
       if (email.match(/@/)) {
-        await addDoc(userCollectionRef, { name, email, password, typeUser, logado: false });
-        alert('Usuário criado com sucesso!');
-        window.location.href = "/login";
+        await addDoc(userCollectionRef, {
+          name,
+          email,
+          password,
+          typeUser,
+          logado: false,
+        });
+        alert("Usuário criado com sucesso!");
       }
     }
   }
   return (
     <>
-    <style>
+      <style>
         {`
           header{
             display:none;
@@ -64,11 +70,15 @@ function Register() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link to="/login" onClick={createUser}>
+            <Link to="/" onClick={createUser} className="btnRegister">
               Criar Conta
+            </Link>
+            <Link to="/" className="btnRegister">
+              Voltar ao início
             </Link>
           </form>
         </div>
+        <img src={alimentos} alt="Alimentos" className="imgAlimentos"/>
       </div>
     </>
   );

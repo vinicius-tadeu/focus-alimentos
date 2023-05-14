@@ -59,7 +59,7 @@ h1{
     box-shadow: 0 0 10px rgb(68, 0, 53);
     text-decoration: none;
 }
-.formLogin button:hover{
+.formLogin .button:hover{
     background-color: #330048;
 }
 .formLogin a{

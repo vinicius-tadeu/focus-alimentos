@@ -14,22 +14,8 @@ export default function DefaultPage() {
   const email = localStorage.getItem("2");
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
-  const status = localStorage.getItem("6");
   const db = getFirestore(firebaseApp);
-  var logar = true;
   console.log('Está no Default Page.');
-
-  if(status){
-    logar = false;
-    console.log("Status ok",logar);
-  }
-  
-  if(logar){
-    window.location.href = "login";
-    logar = false;
-    console.log("Entrou em alterar URL.",logar);
-  }
-
 
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
