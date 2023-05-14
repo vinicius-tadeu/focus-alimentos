@@ -15,29 +15,27 @@ const router = createBrowserRouter([
     path: "/",
     element: <Login />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "register",
-        element: <Register />,
-      },
-      {
-        path: "home",
-        element: <Home />,
-      },
-      {
-        path: "alimentos",
-        element: <Alimentos />,
-      },
-      {
-        path: "admin",
-        element: <Admin />,
-      },
-    ],
+  },
+  {
+    path: "register",
+    element: <Register />,
+  },
+  {
+    path: "home",
+    element: <Home />,
+  },
+  {
+    path: "alimentos",
+    element: <Alimentos />,
+  },
+  {
+    path: "admin",
+    element: <Admin />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
