@@ -10,7 +10,8 @@ export default function Alimentos() {
     return data.filter((a) =>
       a.description.toLowerCase().includes(lowerBusca)
     );
-  },[busca]) 
+  },[busca]);
+  const countData = dataFilter.length;
   return (
     <>
       <DefaultPage />
@@ -24,6 +25,7 @@ export default function Alimentos() {
             setBusca(e.target.value);
           }}
         />
+        <p>Resultados ({countData})</p>
       </div>
       <div className="wrapperFood">
         {dataFilter?.map((i) => {

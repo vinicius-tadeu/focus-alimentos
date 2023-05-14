@@ -34,11 +34,11 @@ p{
 }
 .wrapperBusca{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-right: 6.8%;
     margin-top: 3%;
-    gap: 2%;
+    gap: 10px;
 }
 .wrapperBusca input{
     border-radius: 10px;
