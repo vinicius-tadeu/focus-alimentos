@@ -57,6 +57,7 @@ h1{
     border: none;
     cursor: pointer;
     box-shadow: 0 0 10px rgb(68, 0, 53);
+    text-decoration: none;
 }
 .formLogin button:hover{
     background-color: #330048;
