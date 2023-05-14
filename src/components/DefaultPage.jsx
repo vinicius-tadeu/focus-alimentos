@@ -15,8 +15,7 @@ export default function DefaultPage() {
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
   const db = getFirestore(firebaseApp);
-  console.log('Está no Default Page.');
-
+  
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, {logado: false});

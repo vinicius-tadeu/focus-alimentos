@@ -47,7 +47,6 @@ function Admin() {
 
   async function updateUserSubmit(user) {
     const userDoc = doc(db, "users", user.id);
-    console.log(nameUpdate, emailUpdate, passwordUpdate, typeEditUser);
     if (nameUpdate && emailUpdate && passwordUpdate && typeEditUser != "") {
       await updateDoc(userDoc, {
         name: nameUpdate,
@@ -56,7 +55,6 @@ function Admin() {
         typeUser: typeEditUser,
         logado: false,
       });
-      console.log(user);
     }
   }
 

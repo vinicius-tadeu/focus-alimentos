@@ -42,7 +42,6 @@ function Login() {
       typeUser: usuario.typeUser,
       logado: true,
     });
-    console.log(usuario, document.id);
     armazenar(usuario, document.id);
     window.location.href = "home";
   }

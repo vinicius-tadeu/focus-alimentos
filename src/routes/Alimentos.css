@@ -8,13 +8,44 @@ p{
     color: #bdbdbd;
 }
 .foodCard{
-    background-color: #702b28;
+    background-color: #764ba2;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     width: 300px;
     text-align: center;
+    border: 2px solid #ff0090;
 }
+.cardTitle{
+    background-color: #00c41d;
+    border-radius: 20px;
+    padding: 5px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifs;
+}
+.foodCardInfos{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+}
+.foodCardInfos .pTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 5px;
+    height: 40px;
+    color: #7cff44;
+    font-weight: bold;
+}
+.foodCardInfos .pValue{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
 .wrapperFood{
     padding-top: 5%;
     display: flex;

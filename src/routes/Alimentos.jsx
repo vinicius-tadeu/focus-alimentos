@@ -4,13 +4,10 @@ import { useMemo, useState } from "react";
 import "./Alimentos.css";
 export default function Alimentos() {
   const [busca, setBusca] = useState("");
-  console.log(data);
-  const dataFilter = useMemo(()=>{
+  const dataFilter = useMemo(() => {
     const lowerBusca = busca.toLowerCase();
-    return data.filter((a) =>
-      a.description.toLowerCase().includes(lowerBusca)
-    );
-  },[busca]);
+    return data.filter((a) => a.description.toLowerCase().includes(lowerBusca));
+  }, [busca]);
   const countData = dataFilter.length;
   return (
     <>
@@ -32,30 +29,43 @@ export default function Alimentos() {
           return (
             <div key={i.id} className="foodCard">
               <p className="cardCount">{i.id}</p>
-              <h2>{i.description}</h2>
-              <p>Categoria: {i.category}</p>
-              <p>
-                Proteínas:{" "}
-                {Math.round(i.protein_g) ? Math.round(i.protein_g) + "g" : "*"}
-              </p>
-              <p>
-                Carboidratos:{" "}
-                {Math.round(i.carbohydrate_g)
-                  ? Math.round(i.carbohydrate_g) + "g"
-                  : "*"}
-              </p>
-              <p>
-                Kcal:{" "}
-                {Math.round(i.energy_kcal)
-                  ? Math.round(i.energy_kcal) + "kcal"
-                  : "*"}
-              </p>
-              <p>
-                Kj:{" "}
-                {Math.round(i.energy_kj)
-                  ? Math.round(i.energy_kcal) + "kj"
-                  : "*"}
-              </p>
+              <h2 className="cardTitle">{i.description}</h2>  
+              <div className="foodCardInfos">
+                <p className="pTitle">Categoria</p>
+                <p className="pValue">{i.category}</p>
+              </div>
+              <div className="foodCardInfos">
+                <p className="pTitle">Proteínas </p>
+                <p className="pValue">
+                  {Math.round(i.protein_g)
+                    ? Math.round(i.protein_g) + "g"
+                    : "*"}
+                </p>
+              </div>
+              <div className="foodCardInfos">
+                <p className="pTitle">Carboidratos </p>
+                <p className="pValue">
+                  {Math.round(i.carbohydrate_g)
+                    ? Math.round(i.carbohydrate_g) + "g"
+                    : "*"}
+                </p>
+              </div>
+              <div className="foodCardInfos">
+                <p className="pTitle">Kcal </p>
+                <p className="pValue">
+                  {Math.round(i.energy_kcal)
+                    ? Math.round(i.energy_kcal) + "kcal"
+                    : "*"}
+                </p>
+              </div>
+              <div className="foodCardInfos">
+                <p className="pTitle">Kj </p>
+                <p className="pValue">
+                  {Math.round(i.energy_kj)
+                    ? Math.round(i.energy_kcal) + "kj"
+                    : "*"}
+                </p>
+              </div>
             </div>
           );
         })}
