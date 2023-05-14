@@ -63,7 +63,7 @@ export default function DefaultPage() {
             <li>{name}</li>
             <li>{email}</li>
           </div>
-          <Link to="/login" className="btnSair" onClick={updateUserState}>Sair</Link>
+          <Link to="/" className="btnSair" onClick={updateUserState}>Sair</Link>
         </ul>
       </header>
     </>
