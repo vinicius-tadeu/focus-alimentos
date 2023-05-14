@@ -30,6 +30,8 @@ function Register() {
         });
         alert("Usuário criado com sucesso!");
       }
+    }else{
+      alert("Preencha todos os campos!");
     }
   }
   return (
