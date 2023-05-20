@@ -2,22 +2,21 @@ h1{
     font-family: monospace;
 }
 h1,h2{
-    color: #fff;
+    color: #cacaca;
 }
 p{
     color: #bdbdbd;
 }
 .foodCard{
-    background-color: #764ba2;
+    background-color: #181717;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     width: 300px;
     text-align: center;
-    border: 2px solid #ff0090;
 }
 .cardTitle{
-    background-color: #00c41d;
+    background-color: #073f01;
     border-radius: 20px;
     padding: 5px;
     color: #fff;
@@ -62,6 +61,15 @@ p{
 .cardCount{
     color: #ff0059;
     font-weight: bold;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 .wrapperBusca{
     display: flex;
