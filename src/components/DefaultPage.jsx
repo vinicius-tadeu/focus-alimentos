@@ -3,6 +3,9 @@ import "./DefaultPage.css";
 import pessoa from "../assets/pessoa.png";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
+import { useState } from "react";
+
+import ModalResetPassword from './ModalResetPassword.jsx';
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
@@ -14,8 +17,17 @@ export default function DefaultPage() {
   const email = localStorage.getItem("2");
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
+  const [modal, setModal] = useState(false);
   const db = getFirestore(firebaseApp);
   
+  function openModal(){
+    if(modal){
+      setModal(false);
+    }else{
+      setModal(true);
+    }
+  }
+
   async function updateUserState(){
     const userDoc = doc(db, "users", id);
     await updateDoc(userDoc, {logado: false});
@@ -48,10 +60,11 @@ export default function DefaultPage() {
             <li>{name}</li>
             <li>{email}</li>
           </div>
-          <button className="btnCardHeader">Redefinir Senha</button>
+          <button className="btnCardHeader" onClick={openModal}>Redefinir Senha</button>
           <Link to="/" className="btnSair" onClick={updateUserState}>Sair</Link>
         </ul>
       </header>
+      {modal?<ModalResetPassword/>:''}
     </>
   );
 }
