@@ -48,6 +48,7 @@ export default function DefaultPage() {
             <li>{name}</li>
             <li>{email}</li>
           </div>
+          <button className="btnCardHeader">Redefinir Senha</button>
           <Link to="/" className="btnSair" onClick={updateUserState}>Sair</Link>
         </ul>
       </header>
