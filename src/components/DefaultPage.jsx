@@ -5,8 +5,6 @@ import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { useState } from "react";
 
-import ModalResetPassword from './ModalResetPassword.jsx';
-
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
   authDomain: "alimentos-gustavo.firebaseapp.com",
@@ -17,20 +15,28 @@ export default function DefaultPage() {
   const email = localStorage.getItem("2");
   const typeUser = localStorage.getItem("4");
   const id = localStorage.getItem("5");
+  const [passwordUpdate, setPassword] = useState("");
   const [modal, setModal] = useState(false);
   const db = getFirestore(firebaseApp);
-  
-  function openModal(){
-    if(modal){
+
+  function openModal() {
+    if (modal) {
       setModal(false);
-    }else{
+    } else {
       setModal(true);
     }
   }
-
-  async function updateUserState(){
+  async function updateUserSubmit() {
     const userDoc = doc(db, "users", id);
-    await updateDoc(userDoc, {logado: false});
+    if (passwordUpdate != "") {
+      await updateDoc(userDoc, { password: passwordUpdate });
+      alert("Senha Alterada com sucesso!");
+      setModal(false);
+    }
+  }
+  async function updateUserState() {
+    const userDoc = doc(db, "users", id);
+    await updateDoc(userDoc, { logado: false });
   }
   return (
     <>
@@ -60,11 +66,37 @@ export default function DefaultPage() {
             <li>{name}</li>
             <li>{email}</li>
           </div>
-          <button className="btnCardHeader" onClick={openModal}>Redefinir Senha</button>
-          <Link to="/" className="btnSair" onClick={updateUserState}>Sair</Link>
+          <button className="btnCardHeader" onClick={openModal}>
+            Redefinir Senha
+          </button>
+          <Link to="/" className="btnSair" onClick={updateUserState}>
+            Sair
+          </Link>
         </ul>
       </header>
-      {modal?<ModalResetPassword/>:''}
+      {modal ? (
+        <>
+          <div className="modalReset">
+            <form className="formRegisterModal">
+              <h2>Redefinir Senha</h2>
+              <label htmlFor="Senha">Nova Senha</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Senha..."
+                value={passwordUpdate}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <Link to="/" onClick={updateUserSubmit} className="btnRegister">
+                Salvar
+              </Link>
+            </form>
+            <div className="blurModal"></div>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 }

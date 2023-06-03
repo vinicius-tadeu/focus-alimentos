@@ -57,6 +57,7 @@ p{
     display: block;
     padding-top: 80px;
     text-align: center;
+    color: #fff;
 }
 .cardCount{
     color: #ff0059;
@@ -78,6 +79,9 @@ p{
     justify-content: center;
     margin-top: 3%;
     gap: 10px;
+}
+.wrapperBusca h2{
+    color: #fff;
 }
 .wrapperBusca input{
     border-radius: 10px;

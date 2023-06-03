@@ -74,12 +74,15 @@ header{
 .titleMain h1{
     font-size: 3rem;
     text-decoration: underline;
+    color: #fff;
 }
 .titleMain h2{
     font-size: 2rem;
+    color: #fff;
 }
 .titleMain p{
     padding-top: 20px;
+    color: #fff;
     text-align: justify;
 }
 .aboutMain{
@@ -91,9 +94,11 @@ header{
     gap: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+    color: #fff;
 }
 .aboutMain h1{
     font-size: 3rem;
+    color: #fff;
 }
 .aboutMain p{
     text-align: justify;

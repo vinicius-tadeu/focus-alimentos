@@ -48,7 +48,7 @@ function Admin() {
   async function updateUserSubmit(user) {
     const userDoc = doc(db, "users", user.id);
     if (nameUpdate && emailUpdate && passwordUpdate && typeEditUser != "") {
-      await updateDoc(userDoc, {
+      await updateDoc(userDoc,{
         name: nameUpdate,
         email: emailUpdate,
         password: passwordUpdate,

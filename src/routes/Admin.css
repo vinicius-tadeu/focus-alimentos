@@ -9,7 +9,6 @@ body{
 .mainAdmin{
     display: flex;
     justify-content: space-around;
-    height: 90vh;
     padding-top: 5%;
 }
 .ulAdmin{
@@ -74,8 +73,10 @@ li{
     justify-content: space-around;
     background-color: #360940;
     width: 40%;
-    padding: 0 2%;
+    padding: 10% 2%;
     border-radius: 20px;
+    height: 688px;
+    gap: 30px;
 }
 .cardUser{
     padding-bottom: 20px;
