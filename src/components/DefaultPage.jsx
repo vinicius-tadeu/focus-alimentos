@@ -6,9 +6,9 @@ import { initializeApp } from "firebase/app";
 import { useState } from "react";
 
 const firebaseApp = initializeApp({
-  apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",
-  authDomain: "alimentos-gustavo.firebaseapp.com",
-  projectId: "alimentos-gustavo",
+  apiKey: "AIzaSyBYoKdb_kjxuMJjJPahmtWGPmkEB_b5DG4",  
+  authDomain: "alimentos-gustavo1.firebaseapp.com",
+  projectId: "alimentos-gustavo1",
 });
 export default function DefaultPage() {
   const name = localStorage.getItem("1");
